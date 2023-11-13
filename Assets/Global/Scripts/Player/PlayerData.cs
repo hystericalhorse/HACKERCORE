@@ -12,6 +12,8 @@ public class PlayerData
     public int Stamina = 1; // 
     public int Shield = 4; // Subnet Mask
 
+    public float Speed = 10;
+
     // TODO
     // Weapons
     // Upgrades

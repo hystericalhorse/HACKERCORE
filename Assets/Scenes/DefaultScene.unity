@@ -40211,6 +40211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519420032}
+  - component: {fileID: 519420034}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
@@ -40339,6 +40340,23 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a32a00e6f72364f98e42a6c958866e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 519420031}
+  TargetPosition: {fileID: 1432256146}
+  Zoom: 8
+  FixedCamera: 0
+  SlideFactor: 0.1
 --- !u!1 &554474285
 GameObject:
   m_ObjectHideFlags: 0
@@ -40384,6 +40402,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d972d94bf8b6747bdc5ce0494f5bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player:
+    Nickname: NEO
+    Level: 1
+    Kills: 0
+    Health: 0
+    Stamina: 1
+    Shield: 4
+    Speed: 10
 --- !u!1 &571607102
 GameObject:
   m_ObjectHideFlags: 0

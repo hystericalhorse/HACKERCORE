@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }
+	public PlayerData Player;
 
 	#region MONOBEHAVIOUR
 	private void Awake()
@@ -17,5 +18,17 @@ public class GameManager : MonoBehaviour
 			GM = this;
 		}
 	}
+
+	private void Update()
+	{
+		
+	}
 	#endregion
+
+	public void NewGame()
+	{
+		Player = new PlayerData();
+	}
+
+
 }

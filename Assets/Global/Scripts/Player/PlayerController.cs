@@ -43,13 +43,11 @@ public class PlayerController : MonoBehaviour
 
 	void Move()
 	{
-        transform.Translate(Translation * Time.deltaTime * 10, Space.World);
+        transform.Translate(Translation * Time.deltaTime * GameManager.GM.Player.Speed, Space.World);
 	}
 
     void Look()
     {
         transform.rotation = Quaternion.AngleAxis(Rotation, Vector3.forward);
-		//transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(Rotation, Vector3.forward), Time.deltaTime * 30);
-        //Debug.DrawRay(transform.position, transform.rotation.eulerAngles * 10, Color.red);
     }
 }

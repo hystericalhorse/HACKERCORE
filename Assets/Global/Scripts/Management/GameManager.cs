@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }

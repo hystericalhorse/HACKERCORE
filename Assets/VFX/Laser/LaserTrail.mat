@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Trail_Explosion
-  m_Shader: {fileID: -6465566751694194690, guid: c92aa2b10b3fc974293401b4f4871424, type: 3}
+  m_Name: LaserTrail
+  m_Shader: {fileID: -6465566751694194690, guid: 9e6d5e72d877faf4f8390501ab2b9cd1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

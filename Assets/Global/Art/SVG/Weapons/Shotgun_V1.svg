@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3.2627771mm"
+   height="1.1813192mm"
+   viewBox="0 0 3.2627771 1.1813192"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="256"
+     inkscape:cx="627.08008"
+     inkscape:cy="445.0332"
+     inkscape:window-width="2560"
+     inkscape:window-height="1521"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     showgrid="false">
+    <sodipodi:guide
+       position="-72.773033,306.36737"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-68.701884,310.43852"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect20"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect82"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect76"
+       is_visible="true"
+       lpeversion="1" />
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3"
+     transform="translate(-93.516505,-34.181983)">
+    <g
+       id="g20">
+      <path
+         id="path74"
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.076;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 94.331996,34.342782 v 0.0806 l 0.26975,0.36277 -0.14883,0.11059 h 1.69292 c 0.19598,0 0.16411,7.3e-4 0.33951,3.1e-4 0.107,-0.13766 0.1733,-0.36993 0.0181,-0.55216 -0.36122,-0.004 -0.35794,-0.002 -0.35794,-0.002 z"
+         sodipodi:nodetypes="ccccscccc" />
+      <path
+         id="rect74"
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.0745514;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 94.283416,34.355382 -0.66848,0.49756 -0.0571,0.0425 c 0,0 0.0691,0.33291 0.31729,0.42582 l 0.72502,-0.54054 z"
+         sodipodi:nodetypes="cccccc" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.01;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:0;paint-order:markers fill stroke"
+         id="rect75"
+         width="1.0903761"
+         height="0.26017016"
+         x="95.060028"
+         y="34.765995"
+         ry="0.1064565"
+         rx="0.056844074" />
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 165.74802,116.68021 c -0.0792,0.0682 -0.12791,0.17049 -0.13088,0.27493 -0.003,0.10355 0.0391,0.20762 0.11311,0.28008"
+         id="path75"
+         inkscape:path-effect="#path-effect76"
+         inkscape:original-d="m 165.74802,116.68021 c 9.7e-4,0.0795 -0.13158,0.19526 -0.13088,0.27493 7.7e-4,0.0847 0.11211,0.19537 0.11311,0.28008"
+         sodipodi:nodetypes="csc"
+         transform="translate(-69.281273,-82.336918)" />
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 163.59952,117.56269 0.14091,-0.10079 2.15896,-0.008"
+         id="path81"
+         inkscape:path-effect="#path-effect82"
+         inkscape:original-d="m 163.59952,117.56269 c 0.0564,-0.0268 0.11426,-0.074 0.14091,-0.10079 2.04827,-0.009 1.18746,-0.006 2.15896,-0.008"
+         sodipodi:nodetypes="ccc"
+         transform="translate(-69.281273,-83.236918)" />
+      <path
+         style="fill:#565656;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 96.624876,34.217412 c 0,0 0.0785,0.056 0.10973,0.15816 0.022,0.10436 0.007,0.25689 -0.0675,0.36395 -0.0701,0.0915 -0.052,0.061 -0.11161,0.0804"
+         id="path14"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#565656;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 165.90408,117.46776 c -0.0142,0.0131 -0.01,0.009 -0.03,0.0365 -0.02,0.0273 -0.0288,0.0529 -0.0339,0.0763 -0.005,0.0234 -0.006,0.0458 -0.008,0.0665"
+         id="path19"
+         inkscape:path-effect="#path-effect20"
+         inkscape:original-d="m 165.90408,117.46776 c -0.0142,0.0131 -0.0102,0.009 -0.0411,0.038 -0.009,0.0257 -0.0176,0.0514 -0.0265,0.0772 -0.001,0.021 -0.002,0.0434 -0.004,0.0641"
+         sodipodi:nodetypes="cccc"
+         transform="translate(-69.281273,-83.236918)" />
+    </g>
+  </g>
+</svg>

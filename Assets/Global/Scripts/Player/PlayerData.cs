@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 [Serializable]
 public class PlayerData
@@ -14,6 +11,8 @@ public class PlayerData
     public int Health; // 
     public int Stamina = 1; // 
     public int Shield = 4; // Subnet Mask
+
+    public float Speed = 10;
 
     // TODO
     // Weapons

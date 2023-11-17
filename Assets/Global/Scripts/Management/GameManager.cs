@@ -1,9 +1,12 @@
 using UnityEngine;
-
+using System;
 
 public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }
+	public PlayerData Player;
+
+	[SerializeField] Canvas canvas;
 
 	#region MONOBEHAVIOUR
 	private void Awake()
@@ -17,6 +20,24 @@ public class GameManager : MonoBehaviour
 		{
 			GM = this;
 		}
+
+		NewGame();
+	}
+
+	private void Update()
+	{
+		
 	}
 	#endregion
+
+	public void NewGame()
+	{
+		Player = new PlayerData();
+	}
+
+	[Serializable]
+	public struct GameData
+	{
+
+	}
 }

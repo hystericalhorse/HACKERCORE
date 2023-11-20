@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4.5653887mm"
+   height="4.5653868mm"
+   viewBox="0 0 4.5653887 4.5653868"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="128"
+     inkscape:cx="543.82031"
+     inkscape:cy="672.91797"
+     inkscape:window-width="2560"
+     inkscape:window-height="1521"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g556"
+     showgrid="false">
+    <sodipodi:guide
+       position="158.64153,277.06641"
+       orientation="1,0"
+       id="guide366"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Enemy1"
+     transform="translate(-16,-51.999999)">
+    <path
+       id="path491"
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="m 16.45439,52.150008 0.25787,0.562239 0.21445,0.09819 a 2,2 0 0 0 -0.11627,0.116272 L 16.71224,52.712252 16.15,52.454387 v 1.146183 l 0.21497,0.0987 a 2,2 0 0 0 -0.0884,0.583427 2,2 0 0 0 0.0853,0.574125 L 16.15,54.954492 v 1.157035 l 0.56327,-0.260449 -0.2589,0.564306 h 1.14619 l 0.10027,-0.218595 a 2,2 0 0 0 0.57619,0.08527 2,2 0 0 0 0.57619,-0.08578 l 0.10129,0.219108 h 1.15703 l -0.262,-0.565857 -0.21807,-0.100769 a 2,2 0 0 0 0.1173,-0.117305 l 0.10077,0.218074 0.56586,0.262 v -1.157035 l -0.22221,-0.102836 a 2,2 0 0 0 0.0832,-0.569475 v -10e-4 a 2,2 0 0 0 -0.0863,-0.577226 l 0.22531,-0.103353 v -1.146183 l -0.56431,0.258899 0.26045,-0.563273 H 18.9545 l -0.10077,0.218074 a 2,2 0 0 0 -0.57826,-0.08578 2,2 0 0 0 -0.57516,0.08578 l -0.0997,-0.218074 z"
+       inkscape:export-filename="Finished\SquareEnemies_CC.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path494"
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.1536;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="m 17.197544,55.218059 0.287865,-0.13203 0.05027,-0.109799 a 1.024,1.024 0 0 0 0.05953,0.0595 l -0.109792,0.0503 -0.132033,0.287876 0.586852,-5e-6 0.05054,-0.110061 a 1.024,1.024 0 0 0 0.298713,0.0453 1.024,1.024 0 0 0 0.293954,-0.0437 l 0.05004,0.108444 0.592401,1e-6 -0.13335,-0.28839 0.288928,0.132558 -2e-6,-0.586858 -0.111926,-0.0514 a 1.024,1.024 0 0 0 0.04366,-0.295001 1.024,1.024 0 0 0 -0.04392,-0.295024 l 0.112183,-0.0518 -2e-6,-0.592387 -0.289717,0.134137 -0.0516,0.111645 a 1.024,1.024 0 0 0 -0.06007,-0.06 l 0.111659,-0.0516 0.134148,-0.289735 -0.592409,5e-6 -0.05266,0.113781 a 1.024,1.024 0 0 0 -0.291572,-0.0426 l -5.11e-4,-2e-6 a 1.024,1.024 0 0 0 -0.295539,0.0442 l -0.05288,-0.11539 -0.58685,6e-6 0.132558,0.288928 -0.288397,-0.133358 v 0.5924 l 0.111678,0.05157 a 1.024,1.024 0 0 0 -0.04392,0.296083 1.024,1.024 0 0 0 0.04392,0.294465 l -0.111659,0.051 z" />
+  </g>
+</svg>

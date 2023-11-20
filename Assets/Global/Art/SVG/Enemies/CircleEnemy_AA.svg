@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3.9514065mm"
+   height="3.9497428mm"
+   viewBox="0 0 3.9514065 3.9497428"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="128"
+     inkscape:cx="543.82031"
+     inkscape:cy="672.91797"
+     inkscape:window-width="2560"
+     inkscape:window-height="1521"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g556"
+     showgrid="false">
+    <sodipodi:guide
+       position="170.64153,305.06642"
+       orientation="1,0"
+       id="guide366"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Enemy1"
+     transform="translate(-4.0000001,-80.000005)">
+    <path
+       id="path32"
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.3;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:40;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 4.5616577,80.561889 c -0.1375,0.138094 -0.25409,0.295544 -0.34605,0.467357 l 0.68551,0.254325 -0.17703,-0.565132 0.55962,0.182544 -0.2525,-0.687328 c -0.17273,0.09245 -0.33093,0.209785 -0.46955,0.348234 z m 0.72205,0.339094 0.13446,0.366142 0.10341,-0.278807 z m 0.13446,0.366142 -0.0384,0.102677 0.0669,-0.02448 z m 0.0285,0.0782 0.0599,0.162969 -0.15675,-0.0581 -0.19294,0.521072 0.19293,0.521073 0.15676,-0.0581 -0.0599,0.16297 0.51997,0.193303 0.53276,-0.195856 -0.0552,-0.148723 0.15566,0.05701 0.19549,-0.531668 -0.19549,-0.531667 -0.15566,0.057 0.0552,-0.148715 -0.53276,-0.195858 z m 1.05274,0.0026 0.0771,0.02813 -0.0435,-0.118753 z m 0.0336,-0.09062 0.13593,-0.366141 -0.23824,0.08843 z m 0.13593,-0.366141 0.56146,-0.191707 -0.17887,0.574289 0.68294,-0.251032 c -0.0918,-0.169609 -0.20758,-0.325055 -0.34385,-0.46151 l -7.3e-4,-7.31e-4 c -0.13858,-0.138032 -0.29665,-0.254989 -0.46918,-0.347136 z m 0.38259,0.382582 -0.37711,0.138125 0.28758,0.105599 z m -0.0895,1.151402 -0.28757,0.105597 0.3771,0.138125 z m 0.0895,0.243722 0.20088,0.588967 -0.58347,-0.20638 0.25433,0.684771 c 0.17201,-0.09227 0.32959,-0.20922 0.46772,-0.347136 0.13782,-0.13827 0.25465,-0.295973 0.34677,-0.468092 z m -0.38259,0.382587 -0.13593,-0.366145 -0.10231,0.277712 z m -0.13593,-0.366145 0.0435,-0.118756 -0.0771,0.02814 z m -1.08635,-0.08806 -0.0669,-0.02448 0.0384,0.102676 z m -0.0285,0.0782 -0.13448,0.366143 0.23788,-0.08733 z m -0.13448,0.366143 -0.58529,0.200884 0.20271,-0.583466 -0.68843,0.255786 c 0.0926,0.17478 0.21053,0.334863 0.35007,0.475025 0.13778,0.137285 0.29485,0.253738 0.46625,0.34568 z m -0.38258,-0.382582 0.35555,-0.131918 -0.26931,-0.09976 z m 0.0862,-1.14373 0.2693,-0.09975 -0.35554,-0.131911 z"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccsscccccccccccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

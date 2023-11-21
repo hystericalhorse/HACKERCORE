@@ -8,7 +8,7 @@ public class PlayerData
     public int Level = 1;
     public int Kills = 0;
 
-    public int Health; // 
+    public int Health = 8; // Representated by binary?
     public int Stamina = 1; // 
     public int Shield = 4; // Subnet Mask
 

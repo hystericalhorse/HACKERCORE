@@ -7,13 +7,18 @@ public class Grunt : Enemy
 	#region MonoBehaviour
 	void Start()
 	{
-
+		alive = true;
 	}
 
 
 	void Update()
 	{
-
+		if (!alive) return;
+		if (health <= 0 && alive)
+		{
+			OnDeath();
+			return;
+		}
 	}
 	#endregion
 

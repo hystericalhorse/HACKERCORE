@@ -23,7 +23,7 @@ public class ProjectileWeapon : Weapon
 				var isEnemy = collision.gameObject.GetComponent<Enemy>();
 				if (isEnemy != null)
 				{
-					isEnemy.OnHurt();
+					isEnemy.OnHurt(damage);
 				}
 			};
 		}

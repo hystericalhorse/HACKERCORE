@@ -1,19 +1,73 @@
 using UnityEngine;
-using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public abstract class Enemy : MonoBehaviour
 {
+    public float speed;
+	public float attackRange;
     public int health;
     public bool alive;
+
+    private Rigidbody2D rb;
+    private Collider2D col;
 
     public delegate void onDeath();
     public onDeath callOnDeath;
 
-    public abstract void Attack();
-    public abstract void OnHurt();
-    public void OnDeath()
+	public void Awake()
+	{
+		rb = GetComponent<Rigidbody2D>();
+		col = GetComponent<Collider2D>();
+	}
+
+	public void Start()
+	{
+		alive = true;
+	}
+
+	public void Update()
+	{
+		if (!alive) return;
+		if (health <= 0 && alive)
+		{
+			OnDeath();
+			return;
+		}
+
+        Hunt();
+	}
+
+	public virtual void Hunt()
+    {
+        Transform target = GameObject.FindGameObjectWithTag("Player").transform;
+
+		Vector3 dir = target.position - transform.position;
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+		if (Vector2.Distance(transform.position, target.position) <= attackRange)
+		{
+			Attack();
+		}
+		else
+		{
+			var movement = target.position - transform.position;
+			rb.velocity = movement.normalized * speed;
+		}
+	}
+
+    public virtual void Attack() { }
+    public virtual void OnHurt(int damage)
+	{
+		health -= damage;
+	}
+
+    public virtual void OnDeath()
     {
         callOnDeath();
+
+        GameManager.GM.Player.Kills++;
 
         alive = false;
         Destroy(gameObject);

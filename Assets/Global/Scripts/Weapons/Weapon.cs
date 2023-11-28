@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -6,6 +7,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected int range;
     [SerializeField] protected int count;
     [SerializeField] protected float spread;
+
+	[SerializeField] protected GameObject tracer;
+	[SerializeField] protected GameObject impact;
 
     [SerializeField] float fireDelay = 2;
     float timer = 0;
@@ -22,13 +26,22 @@ public class Weapon : MonoBehaviour
 			Vector2 spread_dir = Quaternion.AngleAxis(Random.Range(-spread, spread), Vector3.forward) * direction;
 
 			var hits = Physics2D.RaycastAll(transform.position, spread_dir, range);
-			Debug.DrawRay(transform.position, spread_dir * range, Color.red, 1);
+			var bullet = Instantiate(tracer, transform.position, Quaternion.identity);
+			StartCoroutine(Trace(bullet, spread_dir));
+
 			foreach (var hit in hits)
 			{
 				var isEnemy = hit.collider.gameObject.GetComponent<Enemy>();
 				if (isEnemy != null)
 				{
-					isEnemy.OnHurt();
+					StopCoroutine(Trace(bullet, spread_dir));
+					if (bullet)
+					{
+						Instantiate(impact, hit.transform.position, Quaternion.identity);
+						Destroy(bullet);
+					}
+					isEnemy.OnHurt(damage);
+					break;
 				}
 			}
 		}
@@ -43,5 +56,19 @@ public class Weapon : MonoBehaviour
 		}
 
 		timer -= Time.deltaTime;
+	}
+
+	public virtual IEnumerator Trace(GameObject bullet, Vector2 dir)
+	{
+		float dist = range;
+		while (dist > 0)
+		{
+			if (bullet)
+				bullet.transform.position += (Vector3) dir.normalized * Time.deltaTime * 100;
+			dist -= Time.deltaTime * 100;
+			yield return null;
+		}
+
+		Destroy(bullet);
 	}
 }

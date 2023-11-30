@@ -4,32 +4,28 @@ using UnityEngine;
 using DG.Tweening;
 using Cinemachine;
 
-public class ParticleCollision : MonoBehaviour
-{
-    private ParticleSystem part;
-    public List<ParticleCollisionEvent> collisionEvents;
-    public CinemachineVirtualCamera cam;
-    public GameObject explosionPrefab;
+public class ParticleCollision : MonoBehaviour {
+    private ParticleSystem Particle;
+    public List<ParticleCollisionEvent> CollisionEvents;
+    public CinemachineVirtualCamera VirtualCamera;
+    public GameObject ExplosionPrefab;
 
-    void Start()
-    {
-        part = GetComponent<ParticleSystem>();
-        collisionEvents = new List<ParticleCollisionEvent>();
+    void Start() {
+        Particle = GetComponent<ParticleSystem>();
+        CollisionEvents = new List<ParticleCollisionEvent>();
     }
 
-    void OnParticleCollision(GameObject other)
-    {
-        int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+    void OnParticleCollision(GameObject other) {
+        int numCollisionEvents = Particle.GetCollisionEvents(other, CollisionEvents);
 
-        GameObject explosion = Instantiate(explosionPrefab, collisionEvents[0].intersection, Quaternion.identity);
+        GameObject explosion = Instantiate(ExplosionPrefab, CollisionEvents[0].intersection, Quaternion.identity);
 
         ParticleSystem p = explosion.GetComponent<ParticleSystem>();
         var pmain = p.main;
 
-        cam.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+        VirtualCamera.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
 
         if (other.GetComponent<Rigidbody2D>() != null)
-            other.GetComponent<Rigidbody2D>().AddForceAtPosition(collisionEvents[0].intersection * 10 - transform.position, collisionEvents[0].intersection + Vector3.up);
-
+            other.GetComponent<Rigidbody2D>().AddForceAtPosition(CollisionEvents[0].intersection * 10 - transform.position, CollisionEvents[0].intersection + Vector3.up);
     }
 }

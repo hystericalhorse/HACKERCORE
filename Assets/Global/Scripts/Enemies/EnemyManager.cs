@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
 	public int currentWaveCount = 0;
 	public List<EnemyInfo> enemiesRegistry = new();

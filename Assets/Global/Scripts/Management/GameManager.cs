@@ -67,10 +67,20 @@ public class GameManager : MonoBehaviour
 		isPlaying = true;
 	}
 
-	public void GameOver()
+    public void GameOver()
 	{
-
+		//TODO Serialize highscores and show GameOver UI
 	}
+
+	#region Player Manager
+
+	public void DamagePlayer(int damage)
+	{
+		Player.Health -= (damage - Player.Shield);
+		if (Player.Health <= 0) GameOver();
+	}
+
+	#endregion
 
 	[Serializable]
 	public struct Highscores

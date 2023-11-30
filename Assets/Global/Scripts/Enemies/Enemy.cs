@@ -4,9 +4,15 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     public float speed;
+
 	public float attackRange;
+	public int attackDamage;
+	public float attackCooldown;
+	float attacKTimer;
+
     public int health;
     public bool alive;
+
 
     private Rigidbody2D rb;
     private Collider2D col;
@@ -35,6 +41,8 @@ public abstract class Enemy : MonoBehaviour
 		}
 
         Hunt();
+
+		if (attacKTimer > 0) attacKTimer -= Time.deltaTime;
 	}
 
 	public virtual void Hunt()
@@ -48,7 +56,7 @@ public abstract class Enemy : MonoBehaviour
 
 		if (Vector2.Distance(transform.position, target.position) <= attackRange)
 		{
-			Attack();
+			if (attacKTimer <= 0) Attack();
 		}
 		else
 		{
@@ -57,7 +65,24 @@ public abstract class Enemy : MonoBehaviour
 		}
 	}
 
-    public virtual void Attack() { }
+    public virtual void Attack()
+	{
+		Transform target = GameObject.FindGameObjectWithTag("Player").transform;
+		Vector3 dir = target.position - transform.position;
+
+		var hitscan = Physics2D.RaycastAll(transform.position, dir.normalized, attackRange);
+		foreach (var hit in hitscan)
+		{
+			if (hit.collider == null) continue;
+			if (hit.collider.gameObject == target)
+			{
+				GameManager.GM.DamagePlayer(attackDamage);
+				attacKTimer = attackCooldown;
+				return;
+			}
+		}
+	}
+
     public virtual void OnHurt(int damage)
 	{
 		health -= damage;

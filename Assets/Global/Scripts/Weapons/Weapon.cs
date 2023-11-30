@@ -9,7 +9,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected float spread;
     [SerializeField] protected float width = 1;
 
-	[SerializeField] protected LineRenderer[] tracers;
+	[SerializeField] protected string firesound;
+	[SerializeField] protected string impactsound;
+
+	// Prefabs
+	[SerializeField] protected GameObject guide;
 	[SerializeField] protected GameObject trail;
 	[SerializeField] protected GameObject impact;
 
@@ -39,6 +43,7 @@ public class Weapon : MonoBehaviour
 			var bullet = Instantiate(trail, transform.position, Quaternion.identity);
 			// TODO Replace this stuff with a LineRenderer, Do the impact in the hits section.
 			StartCoroutine(Trace(bullet, spread_dir));
+			if (!string.IsNullOrEmpty(firesound)) GameManager.GM.PlaySound(firesound);
 
 			foreach (var hit in hits)
 			{
@@ -49,6 +54,7 @@ public class Weapon : MonoBehaviour
 					if (bullet)
 					{
 						if (impact) Instantiate(impact, hit.transform.position, Quaternion.identity);
+						if (!string.IsNullOrEmpty(impactsound)) GameManager.GM.PlaySound(impactsound);
 						Destroy(bullet);
 					}
 					isEnemy.OnHurt(damage);
@@ -60,7 +66,6 @@ public class Weapon : MonoBehaviour
 
 	public virtual void Update()
 	{
-		Guide();
 		direction = transform.position - parent.position;		
 
 		if (timer <= 0)
@@ -70,26 +75,6 @@ public class Weapon : MonoBehaviour
 		}
 
 		timer -= Time.deltaTime;
-	}
-
-	public virtual void Guide()
-	{
-		Vector2 left_bound = Quaternion.AngleAxis(spread, Vector3.forward) * direction * range;
-		Vector2 right_bound = Quaternion.AngleAxis(-spread, Vector3.forward) * direction * range;
-
-		//Debug.DrawRay(transform.position, left_bound, Color.cyan);
-		//Debug.DrawRay(transform.position, direction * range, Color.red);
-		//Debug.DrawRay(transform.position, right_bound, Color.cyan);
-		//
-		//Debug.DrawRay(transform.position + (Vector3)left_bound, Vector3.up, Color.green);
-
-		foreach (var tracer in tracers)
-		{
-			var line = transform.position + (Vector3) (direction * range);
-			Vector3[] guidelines = { transform.position, line };
-			tracer.SetPositions(guidelines);
-		}
-
 	}
 
 	public virtual IEnumerator Trace(GameObject bullet, Vector2 dir)

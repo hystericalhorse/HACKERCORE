@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.875, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5348819034726394450}
@@ -50,7 +50,9 @@ MonoBehaviour:
   count: 1
   spread: 0
   width: 1
-  tracers: []
+  firesound: pistol
+  impactsound: 
+  guide: {fileID: 0}
   trail: {fileID: 4011103611881655207, guid: ac7581ad5a0e798468bf09f2fbc35877, type: 3}
   impact: {fileID: 4011103611881655207, guid: 0688d6b7802cebf46ac821e309ed1d5c, type: 3}
   parent: {fileID: 0}

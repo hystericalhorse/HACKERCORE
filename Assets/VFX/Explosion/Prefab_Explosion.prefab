@@ -48,8 +48,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.3275638, b: 0, a: 1}
+  m_Intensity: 0.75
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -4997,5 +4997,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1578f95cf527aac4a992155f638be18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionLight: {fileID: 2981887097482557260}
-  explosionLightIntensity: 1
+  ExplosionLight: {fileID: 0}
+  ExplosionLightIntensity: 0

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48.331375mm"
+   height="26.485771mm"
+   viewBox="0 0 48.331375 26.485771"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="360.09413"
+     inkscape:cy="402.52053"
+     inkscape:window-width="2400"
+     inkscape:window-height="1421"
+     inkscape:window-x="3191"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g729"
+     showgrid="false">
+    <sodipodi:guide
+       position="328.40686,271.08658"
+       orientation="0,-1"
+       id="guide652"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="328.27824,274.08"
+       orientation="0,-1"
+       id="guide653"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="328.44194,270.80595"
+       orientation="0,-1"
+       id="guide654"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="328.38932,270.15114"
+       orientation="0,-1"
+       id="guide655"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="328.26654,269.71849"
+       orientation="0,-1"
+       id="guide656"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="331.99663,272.22665"
+       orientation="1,0"
+       id="guide657"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect578"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <linearGradient
+       id="linearGradient439"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop439" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop440" />
+    </linearGradient>
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient439"
+       id="linearGradient578"
+       gradientUnits="userSpaceOnUse"
+       x1="-18.674795"
+       y1="414.05576"
+       x2="-5.8900504"
+       y2="366.47656"
+       spreadMethod="pad" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer15"
+     inkscape:label="World"
+     transform="translate(150.00028,-135.32193)">
+    <g
+       id="g24"
+       inkscape:label="attackIndecators"
+       transform="translate(-200.86907)">
+      <path
+         id="path566"
+         style="fill:#ffffff;fill-opacity:0.00290276;stroke:url(#linearGradient578);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
+         transform="matrix(0.25881905,0.96592583,-0.94698611,0.25374416,447.82886,61.628496)"
+         inkscape:path-effect="#path-effect578"
+         inkscape:original-d="m -18.69407,413.55461 c 0,-16.66667 0,-33.33333 0,-50 m 0.108807,50.03012 c 8.16754,-14.42475 16.335074,-28.84949 24.5026132,-43.27424"
+         d="m -18.69407,413.55461 c 0,-16.66667 0,-33.33333 0,-50 m 0.108807,50.03012 c 8.16754,-14.42475 16.3350737,-28.84949 24.5026132,-43.27424"
+         inkscape:export-filename="Finished\Outline\machinegunOutine.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+  </g>
+</svg>

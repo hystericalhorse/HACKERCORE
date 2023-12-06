@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3286163911610860551, guid: 39608c7d9f24679459a04a108c1bde85, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   - {x: -0.2937677, y: -0.40137097, z: 0}
   m_ShapePathHash: 6865909
   m_Mesh: {fileID: 0}
-  m_InstanceId: -12210
+  m_InstanceId: 37776
   m_LocalBounds:
     m_Center: {x: -0.00033950806, y: -0.00036376715, z: 0}
     m_Extent: {x: 0.49850845, y: 0.49901855, z: 0}
@@ -191,7 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  attackRange: 1
+  attackRange: 2
+  attackDamage: 10
+  attackCooldown: 0.25
   health: 10
   alive: 0
 --- !u!58 &3556957774536240567

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }
 	public PlayerData Player;
+	public float invulnTime = 0;
 
 	public float timer = 0;
 	public bool isPlaying = false;
@@ -51,7 +52,8 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
-		
+		if (!isPlaying) return;
+		if (invulnTime > 0) invulnTime -= Time.deltaTime;
 	}
 	#endregion
 
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour
 	{
 		UnPauseGame();
 
-
+		GameObject.FindObjectOfType<HealthDisplay>()?.UpdateHealthDisplay();
 	}
 
 	public void PauseGame()
@@ -90,6 +92,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
 	{
 		//TODO Serialize highscores and show GameOver UI
+
+		Time.timeScale = Mathf.Epsilon;
+		isPlaying = false;
+
+		Title();
 	}
 
 	public void Title()
@@ -102,8 +109,20 @@ public class GameManager : MonoBehaviour
 
 	public void DamagePlayer(int damage)
 	{
-		Player.Health -= (damage - Player.Shield);
-		if (Player.Health <= 0) GameOver();
+		if (invulnTime > 0) return;
+		if (Player.Shield > 0)
+		{
+			GameObject.FindObjectOfType<ShieldDisplay>()?.DamageShield();
+			Player.Shield -= 1;
+			invulnTime = Player.invAfterShieldHit;
+		}
+		else
+		{
+			Player.Health -= damage;
+			invulnTime = Player.invAfterHit;
+			if (Player.Health <= 0) GameOver();
+			else GameObject.FindObjectOfType<HealthDisplay>()?.UpdateHealthDisplay();
+		}
 	}
 
 	#endregion

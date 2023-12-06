@@ -29,6 +29,7 @@ public abstract class Enemy : MonoBehaviour
 	public void Start()
 	{
 		alive = true;
+		attacKTimer = attackCooldown;
 	}
 
 	public void Update()
@@ -54,7 +55,7 @@ public abstract class Enemy : MonoBehaviour
 
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-		if (Vector2.Distance(transform.position, target.position) <= attackRange)
+		if (Vector2.Distance(transform.position, target.position) - (col as CircleCollider2D).radius <= attackRange)
 		{
 			if (attacKTimer <= 0) Attack();
 		}
@@ -70,11 +71,12 @@ public abstract class Enemy : MonoBehaviour
 		Transform target = GameObject.FindGameObjectWithTag("Player").transform;
 		Vector3 dir = target.position - transform.position;
 
-		var hitscan = Physics2D.RaycastAll(transform.position, dir.normalized, attackRange);
+		var hitscan = Physics2D.RaycastAll(transform.position, dir.normalized, attackRange + (col as CircleCollider2D).radius);
+		Debug.DrawRay(transform.position, dir.normalized * (attackRange + (col as CircleCollider2D).radius), Color.cyan);
 		foreach (var hit in hitscan)
 		{
 			if (hit.collider == null) continue;
-			if (hit.collider.gameObject == target)
+			if (hit.collider.gameObject == target.gameObject)
 			{
 				GameManager.GM.DamagePlayer(attackDamage);
 				attacKTimer = attackCooldown;

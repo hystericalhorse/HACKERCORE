@@ -6,6 +6,7 @@ using System.Collections;
 public class EnemyManager : MonoBehaviour
 {
 	public int currentWaveCount = 0;
+	public int maxWaveCount = 1;
 	public List<EnemyInfo> enemiesRegistry = new();
 	public List<GameObject> enemies = new();
 	public GameObject parent;
@@ -32,7 +33,7 @@ public class EnemyManager : MonoBehaviour
 
 	public void NewWave()
 	{
-		currentWaveCount = UnityEngine.Random.Range(1, 10);
+		currentWaveCount = UnityEngine.Random.Range(1, maxWaveCount);
 		StartCoroutine(SpawnEnemies());
 	}
 

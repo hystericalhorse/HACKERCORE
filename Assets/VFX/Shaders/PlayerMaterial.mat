@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DissolveMaterial
+  m_Name: PlayerMaterial
   m_Shader: {fileID: -6465566751694194690, guid: ccf3a32ff007a92469800ff8ca4d8116, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -54,8 +54,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 0.465
-    - _Scale: 16
+    - _Fade: 0.819
+    - _Scale: 30
     m_Colors:
-    - _Color: {r: 95.87451, g: 3.007828, b: 0, a: 0.003921569}
+    - _Color: {r: 0, g: 4.0156865, b: 1024, a: 1}
   m_BuildTextureStacks: []

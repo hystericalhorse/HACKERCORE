@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyMaterial
+  m_Name: BackgroundMaterial
   m_Shader: {fileID: -6465566751694194690, guid: ccf3a32ff007a92469800ff8ca4d8116, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -54,8 +54,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 0.5
+    - _Fade: 0.756
     - _Scale: 40
     m_Colors:
-    - _Color: {r: 1.866066, g: 0.1024507, b: 0, a: 0}
+    - _Color: {r: 2.9960785, g: 0, b: 2.9385014, a: 0}
   m_BuildTextureStacks: []

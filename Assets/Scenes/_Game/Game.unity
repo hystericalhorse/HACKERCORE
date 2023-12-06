@@ -244,7 +244,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8c55a6cc3323ec64aa82dcd332504fce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40815,7 +40815,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -43050,5 +43050,5 @@ SceneRoots:
   - {fileID: 1432256146}
   - {fileID: 1085365819}
   - {fileID: 1691175859}
-  - {fileID: 752813444}
   - {fileID: 1046918663}
+  - {fileID: 752813444}

@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }
 	public PlayerData Player;
-	public float invulnTime = 0;
+	public float invulnTimer = 0;
+	public float shieldRegenTimer = 0;
 
 	public float timer = 0;
 	public bool isPlaying = false;
@@ -53,7 +54,12 @@ public class GameManager : MonoBehaviour
 	private void Update()
 	{
 		if (!isPlaying) return;
-		if (invulnTime > 0) invulnTime -= Time.deltaTime;
+		if (invulnTimer > 0) invulnTimer -= Time.deltaTime;
+		if (shieldRegenTimer > 0)
+			shieldRegenTimer -= Time.deltaTime;
+		else if (shieldRegenTimer <= 0 && shieldRegenTimer > -1)
+			RegenShield();
+
 	}
 	#endregion
 
@@ -94,9 +100,10 @@ public class GameManager : MonoBehaviour
 		//TODO Serialize highscores and show GameOver UI
 
 		Time.timeScale = Mathf.Epsilon;
-		isPlaying = false;
+		hud.gameObject.SetActive(false);
+		pause.gameObject.SetActive(true);
 
-		Title();
+		isPlaying = false;
 	}
 
 	public void Title()
@@ -107,22 +114,41 @@ public class GameManager : MonoBehaviour
 
 	#region Player Manager
 
+	[ContextMenu("DamagePlayer")]
+	public void DamageTest()
+	{
+		DamagePlayer(10);
+	}
+
 	public void DamagePlayer(int damage)
 	{
-		if (invulnTime > 0) return;
+		if (invulnTimer > 0) return;
 		if (Player.Shield > 0)
 		{
 			GameObject.FindObjectOfType<ShieldDisplay>()?.DamageShield();
 			Player.Shield -= 1;
-			invulnTime = Player.invAfterShieldHit;
+			invulnTimer = Player.InvAfterShieldHit;
+			shieldRegenTimer = Player.ShieldRegenTime;
 		}
 		else
 		{
 			Player.Health -= damage;
-			invulnTime = Player.invAfterHit;
+			invulnTimer = Player.InvAfterHit;
 			if (Player.Health <= 0) GameOver();
 			else GameObject.FindObjectOfType<HealthDisplay>()?.UpdateHealthDisplay();
 		}
+	}
+
+	public void RegenShield()
+	{
+		shieldRegenTimer = -1;
+		Player.Shield = (int) Mathf.Clamp(Player.Shield + 1, 0, 4);
+		GameObject.FindObjectOfType<ShieldDisplay>()?.FixShield();
+	}
+
+	public void HealPlayer()
+	{
+		Player.Health = Player.MaxHealth;
 	}
 
 	#endregion

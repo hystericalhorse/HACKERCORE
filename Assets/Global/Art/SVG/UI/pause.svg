@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64mm"
+   height="64mm"
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="pause.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.9682216"
+     inkscape:cx="207.19477"
+     inkscape:cy="155.64876"
+     inkscape:window-width="2560"
+     inkscape:window-height="1476"
+     inkscape:window-x="3428"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect846"
+       style="fill:#fdffff;fill-opacity:1;stroke-width:61.9691"
+       d="M 37.318359,0 C 16.379777,0 -0.4765625,16.856339 -0.4765625,37.794922 V 204.09375 c 0,20.93858 16.8563395,37.79687 37.7949215,37.79687 H 203.61719 c 20.93858,10e-6 37.79687,-16.85829 37.79687,-37.79687 V 37.794922 C 241.41406,16.856339 224.55577,0 203.61719,0 Z m 24.09961,18.898438 H 180.47266 c 23.55592,0 42.51953,18.963609 42.51953,42.519531 V 180.47266 c 0,23.55592 -18.96361,42.51953 -42.51953,42.51953 H 61.417969 c -23.555924,0 -42.519531,-18.96361 -42.519531,-42.51953 V 61.417969 c 0,-23.555922 18.963607,-42.519531 42.519531,-42.519531 z"
+       transform="scale(0.26458333)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:16.396"
+       id="rect2534"
+       width="10"
+       height="40"
+       x="15.534832"
+       y="12" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:16.396"
+       id="rect2534-5"
+       width="10"
+       height="40"
+       x="37.534832"
+       y="12" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2" />
+</svg>

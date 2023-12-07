@@ -28,6 +28,8 @@ public class Weapon : MonoBehaviour
 	{
 		if (parent == null)
 			parent = gameObject.transform.parent.transform;
+
+		timer = fireDelay;
 	}
 
     public virtual void OnShoot()

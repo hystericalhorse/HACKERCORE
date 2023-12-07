@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] AudioMixerGroup mixerGroup;
 	[SerializeField] Sound[] sounds;
 	[SerializeField] Sound[] music;
-	float musicTime = 0;
+	int musicIndex = 0;
 
 	#region MONOBEHAVIOUR
 	private void Awake()
@@ -73,6 +73,9 @@ public class GameManager : MonoBehaviour
 			sound.source.playOnAwake = false;
 			sound.source.outputAudioMixerGroup = mixerGroup;
 		}
+
+		musicIndex = UnityEngine.Random.Range(0, music.Length - 1);
+		Music();
 	}
 
 	private void Update()
@@ -85,9 +88,6 @@ public class GameManager : MonoBehaviour
 			shieldRegenTimer -= Time.deltaTime;
 		else if (shieldRegenTimer <= 0 && shieldRegenTimer > -1)
 			RegenShield();
-
-		if (musicTime > 0) musicTime -= Time.deltaTime;
-		else Music();
 	}
 	#endregion
 
@@ -224,25 +224,25 @@ public class GameManager : MonoBehaviour
 
 	public void Music()
 	{
-		var song = music[UnityEngine.Random.Range(0, music.Length - 1)];
+		var song = music[musicIndex];
 		if (song == null) return;
 		
 		StartCoroutine(PlaySong(song, song.source.clip.length - 0.2f, 0.2f));
-		musicTime = song.source.clip.length;
 	}
 
 	public IEnumerator PlaySong(Sound sound, float time, float fadeTime = 0.2f)
 	{
+		GameObject.FindAnyObjectByType<MusicDisplay>()?.UpdateDisplay(sound.name);
 		sound.source.Play();
 		sound.source.pitch = Mathf.Epsilon;
-		while (sound.source.pitch <= sound.pitch)
+		while (sound.source.pitch < sound.pitch)
 		{
 			sound.source.pitch += fadeTime * Time.deltaTime;
 			yield return null;
 		}
 		sound.source.pitch = sound.pitch;
 
-		yield return new WaitForSeconds(time);
+		yield return new WaitForSeconds(time - 0.2f);
 
 		while (sound.source.pitch > 0)
 		{
@@ -253,6 +253,9 @@ public class GameManager : MonoBehaviour
 
 		sound.source.Stop();
 		sound.source.pitch = sound.pitch;
+		musicIndex++; if (musicIndex > music.Length - 1) musicIndex = 0;
+
+		Music();
 	}
 
 	public void PlaySound(string name)
@@ -298,6 +301,11 @@ public class GameManager : MonoBehaviour
 	public void StopSounds()
 	{
 		foreach (var sound in sounds)
+		{
+			sound.source.Stop();
+		}
+
+		foreach (var sound in music)
 		{
 			sound.source.Stop();
 		}

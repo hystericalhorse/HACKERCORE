@@ -8,12 +8,13 @@ public class HealthDisplay : MonoBehaviour
 {
 	[SerializeField] TextMeshProUGUI text;
 	[SerializeField] Slider slider;
+	public bool EasyMode = false;
 
 	public void UpdateHealthDisplay()
 	{
 		var health_as_binary = System.Convert.ToString(GameManager.GM.Player.Health, 2).PadLeft(6, '0');
 
 		slider.value = (float) GameManager.GM.Player.Health / (float) GameManager.GM.Player.MaxHealth;
-		text.text = health_as_binary;
+		text.text = health_as_binary + ((EasyMode) ? $"({GameManager.GM.Player.Health})" : "");
 	}
 }

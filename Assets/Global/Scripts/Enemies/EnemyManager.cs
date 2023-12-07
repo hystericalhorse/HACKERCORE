@@ -5,15 +5,24 @@ using System.Collections;
 
 public class EnemyManager : MonoBehaviour
 {
+	public int wave = 1;
 	public int currentWaveCount = 0;
 	public int maxWaveCount = 1;
 	public List<EnemyInfo> enemiesRegistry = new();
 	public List<GameObject> enemies = new();
+	public Transform target;
 	public GameObject parent;
 
 	public void Awake()
 	{
 		if (enemiesRegistry.Count <= 0) Destroy(this);
+	}
+
+	public void Start()
+	{
+		if (target == null) target = GameObject.FindGameObjectWithTag("Player").transform;
+		wave = 1;
+		maxWaveCount = 5;
 	}
 
 	public void Update()
@@ -35,6 +44,9 @@ public class EnemyManager : MonoBehaviour
 	{
 		currentWaveCount = UnityEngine.Random.Range(1, maxWaveCount);
 		StartCoroutine(SpawnEnemies());
+
+		maxWaveCount += 2;
+		wave += 1;
 	}
 
 	public IEnumerator SpawnEnemies()
@@ -48,11 +60,20 @@ public class EnemyManager : MonoBehaviour
 
 		for (int i = currentWaveCount; i > 0; i--)
 		{
-			var vec2 = UnityEngine.Random.insideUnitCircle.normalized * 30;
-			vec2 += (Vector2) transform.position;
+			Vector2 vec2 = UnityEngine.Random.insideUnitCircle.normalized * 30;
+
+			while (!WithinBounds(ref vec2, 40, 40))
+			{
+				vec2 = UnityEngine.Random.insideUnitCircle.normalized * 30;
+				vec2 += (Vector2)target.position;
+			}
 
 			var enemy = Instantiate(GetNewEnemy(spawnableThisLevel, currentWaveCount).prefab, vec2, Quaternion.identity, parent.transform);
-			enemy.GetComponent<Enemy>().callOnDeath += () => { enemies.Remove(enemy); };
+			enemy.GetComponent<Enemy>().callOnDeath += () => {
+				GameManager.GM.GiveXP(enemy.GetComponent<Enemy>().xpValue);
+				GameManager.GM.Player.Kills++;
+				enemies.Remove(enemy); 
+			};
 			enemies.Add(enemy);
 
 			yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 2f));
@@ -72,6 +93,8 @@ public class EnemyManager : MonoBehaviour
 
 		return weightedList[UnityEngine.Random.Range(0, weightedList.Count)];
 	}
+
+	private bool WithinBounds(ref Vector2 vec, float hBounds, float vBounds) => ((vec.x < hBounds && vec.x > -hBounds) && (vec.y < vBounds && vec.y > -vBounds));
 
 	[Serializable]
 	public class EnemyInfo

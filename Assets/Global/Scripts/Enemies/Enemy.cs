@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     public int health;
     public bool alive;
 
+	public int xpValue;
 
     private Rigidbody2D rb;
     private Collider2D col;
@@ -93,8 +94,6 @@ public abstract class Enemy : MonoBehaviour
     public virtual void OnDeath()
     {
         callOnDeath();
-
-        GameManager.GM.Player.Kills++;
 
         alive = false;
         Destroy(gameObject);

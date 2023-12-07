@@ -6,6 +6,8 @@ public class PlayerData
     public string Nickname = "NEO";
 
     public int Level = 1;
+    public int XP = 0;
+    public int NextLevel = 0;
     public int Kills = 0;
 
     public int Health = 128; // Representated by binary?

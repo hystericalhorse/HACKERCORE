@@ -2,20 +2,28 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
 	public static GameManager GM { get; private set; }
+	[Header("Player Data")]
 	public PlayerData Player;
 	public float invulnTimer = 0;
 	public float shieldRegenTimer = 0;
 
+	[Header("Game State")]
 	public float timer = 0;
 	public bool isPlaying = false;
 
+	[Header("UI")]
 	[SerializeField] Canvas hud;
 	[SerializeField] Canvas pause;
+	[SerializeField] TextMeshProUGUI pauseDesc;
+	[SerializeField] TextMeshProUGUI info;
+	[SerializeField] GameObject resumeBtn;
 
+	[Header("Audio")]
 	[SerializeField] AudioMixerGroup mixerGroup;
 	[SerializeField] Sound[] sounds;
 
@@ -54,7 +62,9 @@ public class GameManager : MonoBehaviour
 	private void Update()
 	{
 		if (!isPlaying) return;
+
 		if (invulnTimer > 0) invulnTimer -= Time.deltaTime;
+
 		if (shieldRegenTimer > 0)
 			shieldRegenTimer -= Time.deltaTime;
 		else if (shieldRegenTimer <= 0 && shieldRegenTimer > -1)
@@ -75,13 +85,23 @@ public class GameManager : MonoBehaviour
 		UnPauseGame();
 
 		GameObject.FindObjectOfType<HealthDisplay>()?.UpdateHealthDisplay();
+		Player.NextLevel = (int) Math.Pow(2, Player.Level);
+
 	}
 
 	public void PauseGame()
 	{
+		pauseDesc.text = "Game Paused!";
+		var wave = GameObject.FindAnyObjectByType<EnemyManager>()?.wave - 1;
+		info.text =
+			$"Waves: {wave}" +
+			$"\nKills: {Player.Kills}" +
+			$"\nLevel: {Player.Level}";
+
 		Time.timeScale = Mathf.Epsilon;
 		hud.gameObject.SetActive(false);
 		pause.gameObject.SetActive(true);
+		resumeBtn.gameObject.SetActive(true);
 
 		isPlaying = false;
 	}
@@ -98,10 +118,17 @@ public class GameManager : MonoBehaviour
     public void GameOver()
 	{
 		//TODO Serialize highscores and show GameOver UI
+		pauseDesc.text = "Game Over!";
+		var wave = GameObject.FindAnyObjectByType<EnemyManager>()?.wave - 1;
+		info.text =
+			$"Waves: {wave}" +
+			$"\nKills: {Player.Kills}" +
+			$"\nLevel: {Player.Level}";
 
 		Time.timeScale = Mathf.Epsilon;
 		hud.gameObject.SetActive(false);
 		pause.gameObject.SetActive(true);
+		resumeBtn.gameObject.SetActive(false);
 
 		isPlaying = false;
 	}
@@ -114,10 +141,16 @@ public class GameManager : MonoBehaviour
 
 	#region Player Manager
 
-	[ContextMenu("DamagePlayer")]
+	[ContextMenu("Damage")]
 	public void DamageTest()
 	{
 		DamagePlayer(10);
+	}
+
+	[ContextMenu("XP")]
+	public void ExpText()
+	{
+		GiveXP(2);
 	}
 
 	public void DamagePlayer(int damage)
@@ -149,6 +182,22 @@ public class GameManager : MonoBehaviour
 	public void HealPlayer()
 	{
 		Player.Health = Player.MaxHealth;
+	}
+
+	public void GiveXP(int amount = 0)
+	{
+		Player.XP += amount;
+		if (Player.XP >= Player.NextLevel) LevelUp();
+		GameObject.FindObjectOfType<XPDisplay>()?.UpdateXPDisplay();
+	}
+
+	public void LevelUp()
+	{
+		Player.XP = Player.NextLevel - Player.XP;
+		Player.Level++;
+		//TODO Upgrades
+		Player.Speed += 2; // Placeholder Upgrade
+		Player.NextLevel = (int)Math.Pow(2, Player.Level);
 	}
 
 	#endregion

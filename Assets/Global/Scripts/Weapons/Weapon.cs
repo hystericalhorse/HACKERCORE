@@ -36,7 +36,7 @@ public class Weapon : MonoBehaviour
 		{
 			Vector2 spread_dir = Quaternion.AngleAxis(Random.Range(-spread, spread), Vector3.forward) * direction;
 
-			var hits = (width > 1)?
+			var hits = (width > 0.5)?
 				Physics2D.CircleCastAll(transform.position, width * 0.5f, spread_dir, range):
 				Physics2D.RaycastAll(transform.position, spread_dir, range);
 

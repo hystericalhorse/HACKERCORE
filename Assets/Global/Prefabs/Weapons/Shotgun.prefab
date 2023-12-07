@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 613515757722912004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.025, z: 0}
+  m_LocalPosition: {x: 4.539, y: 0.002, z: 0}
   m_LocalScale: {x: 20, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 3286163911610860551, guid: 37abd06587d76f645a66150502e4b68e, type: 3}
-  m_Color: {r: 0.23404253, g: 1, b: 0, a: 0.5019608}
+  m_Sprite: {fileID: 3286163911610860551, guid: 1a76a58d0d4236f4993c5254be130ba3, type: 3}
+  m_Color: {r: 0.23404253, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2006817672722008203}
   - component: {fileID: 5152780035564094278}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.875, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2594766795550771912}
@@ -130,18 +130,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f88e112b9f046439ee4953ec67d7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  range: 20
-  count: 1
-  spread: 0
+  damage: 2
+  range: 15
+  count: 5
+  spread: 30
   width: 1
-  firesound: pistol
+  firesound: shotgun
   impactsound: 
   guide: {fileID: 0}
   trail: {fileID: 4011103611881655207, guid: ac7581ad5a0e798468bf09f2fbc35877, type: 3}
   impact: {fileID: 4011103611881655207, guid: 0688d6b7802cebf46ac821e309ed1d5c, type: 3}
   parent: {fileID: 0}
-  fireDelay: 2
+  fireDelay: 3
 --- !u!1 &8695748712672093169
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3286163911610860551, guid: 7149f3797f143b44bb03fcd9f21c83d4, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 8506d877bd03cf44da18887c4f864884, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

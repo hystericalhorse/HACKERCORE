@@ -3,6 +3,7 @@ using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using TMPro;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
 	[Header("Audio")]
 	[SerializeField] AudioMixerGroup mixerGroup;
 	[SerializeField] Sound[] sounds;
+	[SerializeField] Sound[] music;
+	float musicTime = 0;
 
 	#region MONOBEHAVIOUR
 	private void Awake()
@@ -57,6 +60,19 @@ public class GameManager : MonoBehaviour
 			sound.source.playOnAwake = false;
 			sound.source.outputAudioMixerGroup = mixerGroup;
 		}
+
+		foreach (var sound in music)
+		{
+			sound.source = gameObject.AddComponent<AudioSource>();
+			sound.source.clip = sound.clip;
+
+			sound.source.volume = sound.volume;
+			sound.source.pitch = sound.pitch;
+			sound.source.loop = sound.loop;
+
+			sound.source.playOnAwake = false;
+			sound.source.outputAudioMixerGroup = mixerGroup;
+		}
 	}
 
 	private void Update()
@@ -70,6 +86,8 @@ public class GameManager : MonoBehaviour
 		else if (shieldRegenTimer <= 0 && shieldRegenTimer > -1)
 			RegenShield();
 
+		if (musicTime > 0) musicTime -= Time.deltaTime;
+		else Music();
 	}
 	#endregion
 
@@ -204,6 +222,39 @@ public class GameManager : MonoBehaviour
 
 	#region Audio Manager
 
+	public void Music()
+	{
+		var song = music[UnityEngine.Random.Range(0, music.Length - 1)];
+		if (song == null) return;
+		
+		StartCoroutine(PlaySong(song, song.source.clip.length - 0.2f, 0.2f));
+		musicTime = song.source.clip.length;
+	}
+
+	public IEnumerator PlaySong(Sound sound, float time, float fadeTime = 0.2f)
+	{
+		sound.source.Play();
+		sound.source.pitch = Mathf.Epsilon;
+		while (sound.source.pitch <= sound.pitch)
+		{
+			sound.source.pitch += fadeTime * Time.deltaTime;
+			yield return null;
+		}
+		sound.source.pitch = sound.pitch;
+
+		yield return new WaitForSeconds(time);
+
+		while (sound.source.pitch > 0)
+		{
+			sound.source.pitch -= fadeTime * Time.deltaTime;
+
+			yield return null;
+		}
+
+		sound.source.Stop();
+		sound.source.pitch = sound.pitch;
+	}
+
 	public void PlaySound(string name)
 	{
 		foreach (var sound in sounds)
@@ -214,6 +265,34 @@ public class GameManager : MonoBehaviour
 				return;
 			}
 		}
+	}
+
+	public IEnumerator FadeInSound(Sound sound, float time = 0.2f)
+	{
+		sound.source.Play();
+		sound.source.pitch = 0;
+		for (float i = time; i > 0;)
+		{
+			sound.source.pitch = Mathf.Lerp(sound.source.pitch, sound.pitch, Time.deltaTime * 0.2f);
+
+			i -= Time.deltaTime;
+			yield return null;
+		}
+	}
+
+	public IEnumerator FadeOutSound(Sound sound, float time = 0.2f)
+	{
+		sound.source.pitch = 0;
+		for (float i = time; i > 0;)
+		{
+			sound.source.pitch = Mathf.Lerp(sound.source.pitch, 0, Time.deltaTime * 0.2f);
+
+			i -= Time.deltaTime;
+			yield return null;
+		}
+
+		sound.source.pitch = sound.pitch;
+		sound.source.Stop();
 	}
 
 	public void StopSounds()

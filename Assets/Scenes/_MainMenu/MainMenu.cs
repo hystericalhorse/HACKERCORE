@@ -10,6 +10,9 @@ public class MainMenu : MonoBehaviour
 	[SerializeField] TextMeshProUGUI title;
 	[SerializeField] GameObject[] buttons;
 
+	[SerializeField] AudioSource loadSFX;
+	[SerializeField] AudioSource ambientSFX;
+
 	public void Start()
 	{
 		Time.timeScale = 1;
@@ -20,11 +23,13 @@ public class MainMenu : MonoBehaviour
 		{
 			go.SetActive(false);
 		}
+
+		loadSFX.Play();
 	}
 
 	public IEnumerator AnimateTitle()
 	{
-		for (float i = 3; i > 0;)
+		for (float i = loadSFX.clip.length; i > 0;)
 		{
 			title.fontSize = Mathf.Lerp(title.fontSize, 100, (title.fontSize / 100) * Time.deltaTime);
 
@@ -39,6 +44,7 @@ public class MainMenu : MonoBehaviour
 		}
 
 		title.text = "H4CK3RC0R3";
+		ambientSFX.Play();
 
 		foreach (var go in buttons)
 		{
@@ -49,6 +55,8 @@ public class MainMenu : MonoBehaviour
 
 	public void StartGame()
 	{
+		loadSFX.Stop();
+		ambientSFX.Stop();
 		SceneManager.LoadScene("Game");
 	}
 

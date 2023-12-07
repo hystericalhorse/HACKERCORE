@@ -48350,7 +48350,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466004685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff24aea33e230514d82cfc94d06d7e50, type: 3}
   m_Name: 
@@ -48450,6 +48450,31 @@ MonoBehaviour:
   - name: shotgun_pump
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 979054ef06459bf40a9db1eb2dba4a9c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  music:
+  - name: nightrider
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: cdf142c0c6a09c24593faed06227bf8d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: redline
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: d1a7e9ab38d30e14690f282b830a9493, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: grudge
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 2dbb49dbca7019a43b4d3c622835babf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: glowstick
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 2da1afa2577c9cf439663e4ef57f5d48, type: 3}
     volume: 1
     pitch: 1
     loop: 0

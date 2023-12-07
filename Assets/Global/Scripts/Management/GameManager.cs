@@ -109,8 +109,10 @@ public class GameManager : MonoBehaviour
 
 	public void PauseGame()
 	{
+		PauseSounds();
 		pauseDesc.text = "Game Paused!";
 		var wave = GameObject.FindAnyObjectByType<EnemyManager>()?.wave - 1;
+		if (wave < 0) wave = 0;
 		info.text =
 			$"Waves: {wave}" +
 			$"\nKills: {Player.Kills}" +
@@ -126,6 +128,7 @@ public class GameManager : MonoBehaviour
 
 	public void UnPauseGame()
 	{
+		UnPauseSounds();
 		Time.timeScale = 1;
 		hud.gameObject.SetActive(true);
 		pause.gameObject.SetActive(false);
@@ -135,9 +138,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
 	{
+		StopSounds();
+		PlaySound("game_over");
 		//TODO Serialize highscores and show GameOver UI
 		pauseDesc.text = "Game Over!";
 		var wave = GameObject.FindAnyObjectByType<EnemyManager>()?.wave - 1;
+		if (wave < 0) wave = 0;
 		info.text =
 			$"Waves: {wave}" +
 			$"\nKills: {Player.Kills}" +
@@ -173,17 +179,20 @@ public class GameManager : MonoBehaviour
 
 	public void DamagePlayer(int damage)
 	{
+		
 		if (invulnTimer > 0) return;
 		if (Player.Shield > 0)
 		{
 			GameObject.FindObjectOfType<ShieldDisplay>()?.DamageShield();
 			Player.Shield -= 1;
+			PlaySound("shield_hit");
 			invulnTimer = Player.InvAfterShieldHit;
 			shieldRegenTimer = Player.ShieldRegenTime;
 		}
 		else
 		{
 			Player.Health -= damage;
+			PlaySound("damage");
 			invulnTimer = Player.InvAfterHit;
 			if (Player.Health <= 0) GameOver();
 			else GameObject.FindObjectOfType<HealthDisplay>()?.UpdateHealthDisplay();
@@ -192,6 +201,7 @@ public class GameManager : MonoBehaviour
 
 	public void RegenShield()
 	{
+		PlaySound("shield_up");
 		shieldRegenTimer = -1;
 		Player.Shield = (int) Mathf.Clamp(Player.Shield + 1, 0, 4);
 		GameObject.FindObjectOfType<ShieldDisplay>()?.FixShield();
@@ -296,6 +306,38 @@ public class GameManager : MonoBehaviour
 
 		sound.source.pitch = sound.pitch;
 		sound.source.Stop();
+	}
+
+    System.Collections.Generic.Queue<Sound> pauseSounds = new();
+	public void PauseSounds()
+	{
+		pauseSounds.Clear();
+		foreach (var sound in sounds)
+		{
+			if (sound.source.isPlaying)
+			{
+				sound.source.Pause();
+				pauseSounds.Enqueue(sound);
+			}
+		}
+
+		foreach (var sound in music)
+		{
+			if (sound.source.isPlaying)
+			{
+				sound.source.Pause();
+				pauseSounds.Enqueue(sound);
+			}
+		}
+	}
+
+	public void UnPauseSounds()
+	{
+		while (pauseSounds.Count > 0)
+		{
+			var sound = pauseSounds.Dequeue();
+			sound.source.UnPause();
+		}
 	}
 
 	public void StopSounds()

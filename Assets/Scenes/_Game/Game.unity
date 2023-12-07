@@ -48271,7 +48271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1371196530946332826, guid: b75e6ded10738d64cb3f7a4ed98ea5a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2006817672722008203, guid: b75e6ded10738d64cb3f7a4ed98ea5a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48351,7 +48351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466004685}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff24aea33e230514d82cfc94d06d7e50, type: 3}
   m_Name: 
@@ -48451,6 +48451,30 @@ MonoBehaviour:
   - name: shotgun_pump
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 979054ef06459bf40a9db1eb2dba4a9c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: game_over
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 46b872e54467cf94fa546e38fdad822f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: damage
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: fee98e947a947f141ab52d6edf227440, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: shield_up
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 3ae1aa4b2e85d0b499f59408681a10b8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: shield_hit
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: d4712dbea10933f4bbcb64dcf7e5f225, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -48785,6 +48809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun
       objectReference: {fileID: 0}
+    - target: {fileID: 1371196530946332826, guid: 2fcb76134b4a6354dae527c2bac8a176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2006817672722008203, guid: 2fcb76134b4a6354dae527c2bac8a176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.625
@@ -48989,6 +49017,7 @@ MonoBehaviour:
   text: {fileID: 1968727417}
   scrollSpeed: 10
   display: 
+  timer: 0
 --- !u!1 &2107649244
 GameObject:
   m_ObjectHideFlags: 0

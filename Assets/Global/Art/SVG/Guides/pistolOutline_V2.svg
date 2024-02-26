@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="51.570705mm"
+   height="1.0780189mm"
+   viewBox="0 0 51.570705 1.0780189"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="360.09413"
+     inkscape:cy="402.52053"
+     inkscape:window-width="2400"
+     inkscape:window-height="1421"
+     inkscape:window-x="3191"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g729"
+     showgrid="false">
+    <sodipodi:guide
+       position="279.47719,219.55924"
+       orientation="0,-1"
+       id="guide652"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="279.34857,222.55266"
+       orientation="0,-1"
+       id="guide653"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="279.51227,219.27861"
+       orientation="0,-1"
+       id="guide654"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="279.45965,218.6238"
+       orientation="0,-1"
+       id="guide655"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="279.33687,218.19115"
+       orientation="0,-1"
+       id="guide656"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="283.06696,220.69931"
+       orientation="1,0"
+       id="guide657"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient611"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop611" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop612" />
+    </linearGradient>
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient611"
+       id="linearGradient612"
+       x1="99.798462"
+       y1="84.333603"
+       x2="148.44434"
+       y2="84.362541"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer15"
+     inkscape:label="World"
+     transform="translate(101.0706,-83.794591)">
+    <g
+       id="g24"
+       inkscape:label="attackIndecators"
+       transform="translate(-200.86907)">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.00260417;stroke:url(#linearGradient612);stroke-width:1;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect611"
+         width="50.570705"
+         height="0.078023277"
+         x="100.29846"
+         y="84.294594"
+         ry="0.012139892"
+         inkscape:export-filename="Finished\Outline\pistolOutline_V2.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="0.64668208mm"
+   height="1.5029445mm"
+   viewBox="0 0 0.64668208 1.5029445"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="gameAssets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="128"
+     inkscape:cx="543.82031"
+     inkscape:cy="672.91797"
+     inkscape:window-width="2560"
+     inkscape:window-height="1521"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g556"
+     showgrid="false">
+    <sodipodi:guide
+       position="-10.329468,359.27773"
+       orientation="1,0"
+       id="guide366"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect460"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect454"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect453"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <linearGradient
+       id="swatch70"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop70" />
+    </linearGradient>
+    <linearGradient
+       id="swatch69"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5f5700;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer13"
+     inkscape:label="TopDown"
+     transform="translate(-184.971,-134.21132)">
+    <g
+       id="g506"
+       inkscape:label="Sig_TD"
+       transform="translate(42.562672,-27.782667)"
+       inkscape:export-filename="Finished\Weapons\Uzi_TD.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:square;stroke-miterlimit:40;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 142.45089,162.02904 c 0,0 -0.007,1.30499 -0.007,1.30499 0,0 0.56963,-9e-4 0.56963,-9e-4 0,0 0.006,-0.53135 0.006,-0.53135 0,0 -0.46163,7e-5 -0.46163,7e-5 0,0 7.3e-4,-0.26481 7.3e-4,-0.26481 0,0 0.46135,-7e-5 0.46135,-7e-5 0,0 -3.9e-4,-0.50798 -3.9e-4,-0.50798 z"
+         id="path452"
+         inkscape:path-effect="#path-effect453"
+         inkscape:original-d="m 142.45089,162.02904 -0.007,1.30499 0.56963,-9e-4 0.006,-0.53135 -0.46163,7e-5 7.3e-4,-0.26481 0.46135,-7e-5 -3.9e-4,-0.50798 z"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:square;stroke-miterlimit:40;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 142.96079,162.55028 c -2e-5,0.0806 -5e-5,0.16123 -7e-5,0.24185"
+         id="path454"
+         inkscape:path-effect="#path-effect454"
+         inkscape:original-d="m 142.96079,162.55028 c -3e-5,0.0806 -5e-5,0.16123 -7e-5,0.24185"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:square;stroke-miterlimit:40;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 142.45745,163.37194 c 0,0 0.0703,0.0899 0.0703,0.0899 0,0 0.41138,-0.002 0.41138,-0.002 0,0 0.06,-0.0858 0.06,-0.0858"
+         id="path459"
+         inkscape:path-effect="#path-effect460"
+         inkscape:original-d="m 142.45745,163.37194 0.0703,0.0899 0.41138,-0.002 0.06,-0.0858"
+         sodipodi:nodetypes="cccc" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.07;stroke-linecap:square;stroke-miterlimit:40;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="rect460"
+         width="0.0029232604"
+         height="0.17247236"
+         x="142.73112"
+         y="162.11525"
+         ry="0.0014616302" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.0553499;stroke-linecap:square;stroke-miterlimit:40.2;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="rect461"
+         width="0.083896481"
+         height="0.20171875"
+         x="142.54308"
+         y="163.02702"
+         ry="0" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.0553499;stroke-linecap:square;stroke-miterlimit:40.2;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="rect462"
+         width="0.083896481"
+         height="0.20171875"
+         x="142.83246"
+         y="163.02496"
+         ry="0" />
+    </g>
+  </g>
+</svg>

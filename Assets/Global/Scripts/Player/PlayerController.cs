@@ -7,13 +7,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Joystick move;
     [SerializeField] Joystick look;
 
+    Rigidbody2D rb;
+
     Vector2 Translation;
     float Rotation;
 
 	#region MonoBehaviour
 	void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
 	void Move()
 	{
-        transform.Translate(Translation * Time.deltaTime * GameManager.GM.Player.Speed, Space.World);
+        rb.velocity = Translation * GameManager.GM.Player.Speed;
 	}
 
     void Look()

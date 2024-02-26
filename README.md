@@ -16,13 +16,13 @@
 ```
 ### **HACKERCORE** is a top-down, 2D shoot-'em-up with a vaguely cyberpunk aesthetic.
 
-##Features
+## Features
 • Top-down, twin-stick shooter in the vein of Enter the Gungeon, The Binding of Isaac, and Geometry Wars.
 • "Vampire Survivors"-style roguelike gameplay, where the longer you survive, the stronger you become.
 • A variety of enemies and weapons which allow for infinite replayability.
 • A vaguely cyberpunk, dare I say "hackercore," aesthetic.
 
-##Installation
+## Installation
 1. Hackercore is being developed in Unity 2022.3.13f1. To install the most current development build, you must have this version of Unity installed.
 Refer to the [Unity documentation to install Unity](https://docs.unity3d.com/Manual/GettingStartedInstallingUnity.html). This Unity version can be found in the [Unity Download Archive](https://unity.com/releases/editor/archive).
 2. Clone the git repository to your local machine.

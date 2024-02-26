@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 	public float invulnTimer = 0;
 	public float shieldRegenTimer = 0;
 
+	[Header("Weapons")]
+	[SerializeField] GameObject gun0;
+	[SerializeField] GameObject gun1;
+
 	[Header("Game State")]
 	public float timer = 0;
 	public bool isPlaying = false;
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] Sound[] sounds;
 	[SerializeField] Sound[] music;
 	int musicIndex = 0;
+
 
 	#region MONOBEHAVIOUR
 	private void Awake()
@@ -76,6 +81,9 @@ public class GameManager : MonoBehaviour
 
 		musicIndex = UnityEngine.Random.Range(0, music.Length - 1);
 		Music();
+
+		gun0.SetActive(true);
+		gun1.SetActive(false);
 	}
 
 	private void Update()
@@ -226,6 +234,12 @@ public class GameManager : MonoBehaviour
 		//TODO Upgrades
 		Player.Speed += 2; // Placeholder Upgrade
 		Player.NextLevel = (int)Math.Pow(2, Player.Level);
+	}
+
+	public void DebugToggleWeapon()
+	{
+		gun0.SetActive(!gun0.activeInHierarchy);
+		gun1.SetActive(!gun1.activeInHierarchy);
 	}
 
 	#endregion

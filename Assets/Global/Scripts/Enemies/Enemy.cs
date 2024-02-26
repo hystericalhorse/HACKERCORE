@@ -42,12 +42,12 @@ public abstract class Enemy : MonoBehaviour
 			return;
 		}
 
-        Hunt();
+        Follow();
 
 		if (attacKTimer > 0) attacKTimer -= Time.deltaTime;
 	}
 
-	public virtual void Hunt()
+	public virtual void Follow()
     {
         Transform target = GameObject.FindGameObjectWithTag("Player").transform;
 
